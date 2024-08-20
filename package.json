@@ -4,7 +4,8 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --cache --check ."
   },
   "dependencies": {
     "@heroicons/react": "^2.1.4",
@@ -29,7 +30,9 @@
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "eslint-config-next": "14.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.3.3"
   },
   "engines": {
     "node": ">=20.12.0"
