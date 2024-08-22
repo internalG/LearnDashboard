@@ -42,30 +42,23 @@ export default function GithubList() {
       }
     >
       {(response) =>
-        response?.map(
-          (issue: {
-            id: number;
-            title: string;
-            created_at: string;
-            user: { login: string };
-          }) => (
-            <div
-              key={issue.id}
-              style={{
-                padding: '20px',
-                borderRadius: '8px',
-                border: 'solid #ccc 1px',
-                margin: '20px auto',
-                maxWidth: '400px',
-              }}
-            >
-              <div style={{ fontWeight: 700 }}>{issue.title}</div>
-              <div style={{ color: '#aaa', marginTop: '8px' }}>
-                {issue.user.login} • {new Date(issue.created_at).toDateString()}
-              </div>
+        response?.map((issue: any) => (
+          <div
+            key={issue.id}
+            style={{
+              padding: '20px',
+              borderRadius: '8px',
+              border: 'solid #ccc 1px',
+              margin: '20px auto',
+              maxWidth: '400px',
+            }}
+          >
+            <div style={{ fontWeight: 700 }}>{issue.title}</div>
+            <div style={{ color: '#aaa', marginTop: '8px' }}>
+              {issue.user.login} • {new Date(issue.created_at).toDateString()}
             </div>
-          ),
-        )
+          </div>
+        ))
       }
     </InfiniteScroll>
   );
